@@ -44,31 +44,6 @@ static short node_xstart(const RRGraphView& rr_graph, RRNodeId node) {
     }
 }
 
-// static short node_xend(const RRGraphView& rr_graph, RRNodeId node) {
-//     switch(rr_graph.node_direction(node)) {
-//         case Direction::DEC:
-//             return rr_graph.node_xlow(node);
-//             break;
-
-//         case Direction::INC:
-//             return rr_graph.node_xhigh(node);
-//             break;
-
-//         case Direction::NONE:
-//             VTR_ASSERT(rr_graph.node_xlow(node) == rr_graph.node_xhigh(node));
-//             return (rr_graph.node_xlow(node));
-//             break;
-
-//         case Direction::BIDIR:
-//             VTR_ASSERT_MSG(false, "Bidir node has no starting point");
-//             break;
-
-//         default:
-//             VTR_ASSERT(false);
-//             break;
-//     }
-// }
-
 static short node_ystart(const RRGraphView& rr_graph, RRNodeId node) {
     switch(rr_graph.node_direction(node)) {
         case Direction::DEC:
@@ -93,31 +68,6 @@ static short node_ystart(const RRGraphView& rr_graph, RRNodeId node) {
             break;
     }
 }
-
-// static short node_yend(const RRGraphView& rr_graph, RRNodeId node) {
-//     switch(rr_graph.node_direction(node)) {
-//         case Direction::DEC:
-//             return rr_graph.node_ylow(node);
-//             break;
-
-//         case Direction::INC:
-//             return rr_graph.node_yhigh(node);
-//             break;
-
-//         case Direction::NONE:
-//             VTR_ASSERT(rr_graph.node_ylow(node) == rr_graph.node_yhigh(node));
-//             return (rr_graph.node_ylow(node));
-//             break;
-
-//         case Direction::BIDIR:
-//             VTR_ASSERT_MSG(false, "Bidir node has no starting point");
-//             break;
-
-//         default:
-//             VTR_ASSERT(false);
-//             break;
-//     }
-// }
 
 std::vector<RREdgeId> mark_interposer_cut_edges_for_removal(const RRGraphView& rr_graph, const DeviceGrid& grid) {
     std::vector<RREdgeId> edges_to_be_removed;
