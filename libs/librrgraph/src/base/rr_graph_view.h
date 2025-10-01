@@ -578,7 +578,7 @@ class RRGraphView {
      * @example
      * RRGraphView rr_graph; // A dummy rr_graph for a short example
      * RRNodeId node; // A dummy node for a short example
-     * for (RREdgeId edge : rr_graph.edges(node)) {
+     * for (t_edge_size edge : rr_graph.edges(node)) {
      *     // Do something with the edge
      * }
      */
